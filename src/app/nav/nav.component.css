@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap'); */
+
+*
+{
+    transition: all 0.3s;
+}
+
+nav
+{
+    background-color: yellowgreen;
+    height: 104px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    font: 400 14px 'Roboto', sans-serif;
+}
+
+
+#leftNavLogo
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: Playfair Display, serif;
+    font-style: italic;
+    
+}
+
+
+ul
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+ul li
+{
+    cursor: pointer;
+    padding:10px;
+    background-color: aqua;
+    border-radius: 34px;
+    font-size: 16px;
+    width: 77px;
+    height: 32px;
+    font-family: DM Sans, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap : 10px;
+}
+
+
+.active , ul li:hover
+{
+    background-color: gainsboro;
+}
+
+
+#rightNavBook
+{
+    
+    cursor: pointer;
+    padding:10px;
+    background-color: aqua;
+    border-radius: 118px;
+    font-size: 16px;
+    width: 148px;
+    height: 48px;
+    font-family: DM Sans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+#rightNavBook:hover
+{
+    background-color: gainsboro;
+    /* border: 2px solid white; */
+}
