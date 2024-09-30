@@ -1,0 +1,92 @@
+*
+{
+    font-family: dm sans, sans-serif;
+}
+
+h2
+{
+    font-family: Playfair Display, serif;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 60.5px;
+    text-align: center;
+    /* font-style: italic; */
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 712px;
+    position: relative;
+    /* background-color: blueviolet; */
+    background-color: white;
+    padding: 20px;
+}
+
+.cardContainer
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 375px;
+    /* background-color: beige; */
+
+}
+
+
+
+.card
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 306px;
+    height: 375px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* padding: 10px; */
+
+}
+
+.card img
+{
+    width: 100px;
+    height: 100px;
+}
+
+.card h3
+{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.card p
+{
+    font-size: 16px;
+    text-align: center;
+    width: 75%;
+    /* padding: 10px */
+}
+
+
+.card a
+{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #AD343E;
+    text-align: center;
+    cursor: pointer;
+
+}
