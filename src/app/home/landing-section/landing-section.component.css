@@ -1,0 +1,154 @@
+#landingSection
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* background-image: url('homeBackground.png'); */
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    width: 100%;
+    height: calc(100vh - 149px);
+    position: relative;
+    /* background-color: blueviolet; */
+}
+/* later check the assets folder for the image and solve the problem */
+
+/* Container for the image */
+.image-container {
+    overflow: hidden;
+    width: 100%; /* Adjust the width as needed */
+    height: 100vh; /* Adjust the height as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Image inside the container */
+.image-container img {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1.2); /* Adjust the scale as needed */
+    translate: 80px -100px;
+}
+
+
+.image-container img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#landingSectionText
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 500px;
+    position: absolute;
+
+}
+
+
+
+h1
+{
+    font-family: Playfair Display, serif;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 72px;
+    text-align: center;
+}
+p
+{
+    font-family: DM Sans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+ul
+{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+ul li
+{
+    cursor: pointer;
+    padding:10px;
+    border-radius: 118px;
+    font-size: 16px;
+    width: 164px;
+    height: 64px;
+    font-family: DM Sans, sans-serif;
+    font-style: normal;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+
+a
+{
+    text-decoration: none;
+}
+#bookATable
+{
+    background-color: rgb(173, 52, 62);
+}
+
+
+#bookATable a
+{
+    color: white;
+}
+
+
+#exploreMenu
+{
+    background-color: gainsboro;
+}
+
+#exploreMenu a
+{
+    color: black;
+}
+
+
+#bookATable:hover, #exploreMenu:hover
+{
+    background-color: goldenrod;
+}
