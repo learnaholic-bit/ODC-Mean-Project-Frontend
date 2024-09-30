@@ -1,0 +1,74 @@
+/* #region plainTxt */
+.landingTextHolder
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    width: 100%;
+    gap: 20px;
+}
+
+.landingTextHolder h1
+{
+    font-family: Playfair Display, serif;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 96px;
+    text-align: center;
+    /* font-style: italic; */
+}
+
+.landingTextHolder p
+{
+    font-family: DM Sans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    width: 560px;
+}
+
+/* #endregion */
+
+
+/* #region menu selection */
+ul
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+li  
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 48px;
+    border-radius: 118px;
+    font-size: 16px;
+    font-family: DM Sans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid black;   
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+li:hover, .active
+{
+    background-color: rgb(173, 52, 62);
+    color: white;
+    /* border: 2px solid white; */
+}
+
+/* #endregion */

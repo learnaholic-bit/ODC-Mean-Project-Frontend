@@ -1,7 +1,15 @@
-<p>menu works!</p>
-<!-- try to add second degree route -->
-<!-- maybe add custom path but how to change contnt-> by logic ?? -->
-<!-- should i make it different views or different components or logical match function ?? -->
+<div class="landingTextHolder">
+    <h1>Our Menu</h1>
+    <p>We consider all the drivers of change gives you the components you need to change to create a truly happens.</p>
+</div>
+<ul>
+    <!-- you should omit / as i think we will continue the path not open from start -->
+    <li><a routerLink="/" routerLinkActive="active">All</a></li>
+    <li><a routerLink="/home">Breakfast</a></li>
+    <li><a routerLink="/menu/Main">Main Dishes</a></li>
+    <li><a routerLink="/menu/Drinks">Drinks</a></li>
+    <li><a routerLink="/menu/Desserts">Desserts</a></li>
+</ul>
 
 <router-outlet></router-outlet>
 <!-- <app-all></app-all> -->
