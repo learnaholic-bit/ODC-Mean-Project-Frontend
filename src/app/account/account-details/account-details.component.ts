@@ -11,15 +11,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AccountDetailsComponent implements OnInit {
   //won't use the input mostly
-  @Input() loginStatus: boolean = false; // Define @Input property with default value
+  // @Input() loginStatus: boolean = false; // Define @Input property with default value
   private httpClient = inject(HttpClient);
 
   //constructor(private route: ActivatedRoute, private router: Router) { }
 
 
   ngOnInit(): void {
-    this.loginStatus = (sessionStorage.getItem('currentLoggedIn') === 'true');
-    console.log(this.loginStatus);
+    console.log('Account Details ib init');
+    console.log(sessionStorage.getItem('currentLoggedIn') + "from details")
+    // console.log(this.loginStatus);
 
 
     // here implementing  the request to the server to get the data

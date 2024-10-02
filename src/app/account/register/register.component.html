@@ -1,1 +1,22 @@
-<p>register works!</p>
+<div class="container">
+
+    <div class="card">
+        <h1>Register</h1>
+        <p>get account details here and check cookies for login / register</p>
+        <form (submit)="onSubmit($event)" method="post">
+            <input type="text" name="email" placeholder="email">
+            <input type="text" name="username" placeholder="username">
+            <input type="password" name="password" placeholder="password">
+            <label for="file-upload" class="custom-file-upload">
+                Choose a profile image
+            </label>
+            <input id="file-upload" type="file" name="image" accept="image/*" style="display: none;">
+            <input type="submit" value="Register">
+
+        </form>
+        <p>Have an account? <a routerLink="/account/login">Login</a></p>
+    
+    
+    </div>
+
+</div>
