@@ -1,12 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
-import { AllComponent } from "./all/all.component";
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [RouterOutlet, AllComponent, RouterLink],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
