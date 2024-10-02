@@ -6,6 +6,8 @@ import { BreakfastComponent } from './menu/breakfast/breakfast.component';
 import { MainDishesComponent } from './menu/main-dishes/main-dishes.component';
 import { DrinksComponent } from './menu/drinks/drinks.component';
 import { DesertsComponent } from './menu/deserts/deserts.component';
+import { AccountComponent } from './account/account.component';
+import { ManageComponent } from './manage/manage.component';
 
 export const routes: Routes = [
 {
@@ -19,38 +21,47 @@ export const routes: Routes = [
 {
     path: 'menu',
     component: MenuComponent,
-    children: [
-        {
-            path: '',
-            component:AllComponent
-        },
-        {
-            path: 'Breakfast',
-            component: BreakfastComponent
-        },
-        {
-            path: 'Main',
-            component: MainDishesComponent
-        },
-        {
-            path: 'drinks',
-            component: DrinksComponent
-        },
-        {
-            path: 'Desserts',
-            component: DesertsComponent
-        },
-        {
-            path: '**',
-            redirectTo: ''
-        }
-    ]
+    // children: [
+    //     {
+    //         path: '',
+    //         component:AllComponent
+    //     },
+    //     {
+    //         path: 'breakfast',
+    //         component: BreakfastComponent
+    //     },
+    //     {
+    //         path: 'main',
+    //         component: MainDishesComponent
+    //     },
+    //     {
+    //         path: 'drinks',
+    //         component: DrinksComponent
+    //     },
+    //     {
+    //         path: 'desserts',
+    //         component: DesertsComponent
+    //     },
+    //     {
+    //         path: '**',
+    //         redirectTo: ''
+    //     }
+    // ]
 },
 // {
 //     path: 'about',
 //     component:
 // }
 // ,
+
+{
+    path: 'account',
+    component: AccountComponent
+},
+{
+    path: 'manage',
+    component: ManageComponent
+},
 {
     path: '**',
     redirectTo: ''

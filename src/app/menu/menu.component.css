@@ -5,9 +5,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 50px;
-    width: 100%;
+    margin: 50px 0px;
+    width: 100vw;
     gap: 20px;
+    /* background-color: turquoise; */
 }
 
 .landingTextHolder h1
@@ -41,11 +42,12 @@ ul
     display: flex;
     align-items: center;
     gap: 20px;
-    width: 100%;
+    width: 100vw;
     justify-content: center;
 }
 
 li  
+/* a */
 {
     display: flex;
     align-items: center;
@@ -62,13 +64,132 @@ li
     padding: 10px;
     cursor: pointer;
     transition: all 0.2s;
+    color: black;
 }
 
-li:hover, .active
+li:hover
 {
-    background-color: rgb(173, 52, 62);
+    background-color: rgba(173, 52, 62, 0.703);
     color: white;
+    /* width: 1480px; */
     /* border: 2px solid white; */
 }
+
+.activeLink
+{
+    background-color: rgb(173, 52, 62) !important;
+    color: white;
+    /* width: 1480px; */
+    /* border: 2px solid white; */
+}
+
+a
+{
+    text-decoration: none;
+}
+
+/* #endregion */
+
+
+
+/* #region menu items */
+
+
+.itemsContainer
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 100%;
+    gap: 20px;
+    padding: 50px;
+}
+
+.item 
+{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    width: 306px;
+    height: 428px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: DM Sans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    border: 2px solid #DBDFD0;
+    /* cursor: pointer; */
+    transition: all 0.2s;
+    color: black;
+    background-color: white;
+    overflow: hidden;
+}
+
+
+.item:hover
+{}
+
+
+.item img
+{
+    /* width: 100%; */
+    height: 230px;
+    position: relative;
+    object-fit: cover;
+    object-position: center;
+    /* overflow: hidden; */
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.itemFlexData
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* padding: 50px 10px; */
+    align-items: center;
+    /* gap: 10px; */
+    /* padding: 10px; */
+    width: 100%;
+    height: calc(100% - 230px);
+    padding: 20px;
+    font-family: DM Sans, sans-serif;
+}
+
+
+.itemPrice
+{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #AD343E;
+}
+
+.itemName
+{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    /* font-style: italic; */
+}
+
+.itemDescription
+{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
 
 /* #endregion */

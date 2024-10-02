@@ -9,6 +9,8 @@
 nav
 {
     background-color: white;
+    /* width: 100vw; */
+    /* background-color: tomato; */
     height: 104px;
     display: flex;
     justify-content: space-between;
@@ -90,4 +92,15 @@ ul li
 {
     background-color: gainsboro;
     /* border: 2px solid white; */
+}
+
+li a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.active
+{
+    background-color: yellow;
 }
