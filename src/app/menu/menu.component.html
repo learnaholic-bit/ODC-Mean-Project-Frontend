@@ -10,20 +10,21 @@
     <li><a routerLink="/menu/drinks" routerLinkActive="activeLink">Drinks</a></li>
     <li><a routerLink="/menu/desserts" routerLinkActive="activeLink">Desserts</a></li> -->
     <!-- Alternative approach -->
-    <li (click)="changeCategory($event, 'all')">All</li>
-    <li (click)="changeCategory($event, 'breakfast')">Breakfast</li>
-    <li (click)="changeCategory($event, 'main')">Main Dishes</li>
-    <li (click)="changeCategory($event, 'drinks')">Drinks</li>
-    <li (click)="changeCategory($event, 'desserts')">Desserts</li>
+     <!-- set all as intial active if not given -->
+    <li category="all" (click)="changeCategory($event, 'all')" class="activeLink">All</li>
+    <li category="breakfast" (click)="changeCategory($event, 'breakfast')">Breakfast</li>
+    <li category="main" (click)="changeCategory($event, 'main')">Main Dishes</li>
+    <li category="drinks" (click)="changeCategory($event, 'drinks')">Drinks</li>
+    <li category="desserts" (click)="changeCategory($event, 'desserts')">Desserts</li>
 </ul>
 
 
 <div class="itemsContainer">
     @for (item of items; track $index) {
     <div class="item">
-        <img [src]="item?.image" alt="item.name">
+        <img [src]="item?.photoPath" alt="photoPath">
         <div class="itemFlexData">
-            <p class="itemPrice">{{item?.price}}</p>
+            <p class="itemPrice">${{item?.price}}</p>
             <h3 class="itemName">{{item?.name}}</h3>
             <p class="itemDescription">{{item?.description}}</p>
         </div>

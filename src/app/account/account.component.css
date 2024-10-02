@@ -1,0 +1,56 @@
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: yellow;
+    display: none;
+}
+
+.card
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 500px;
+    height: 600px;
+    background-color: tomato;
+    width: 500px;
+    border-radius: 30px;
+    padding: 20px;
+}
+h1
+{
+    background-color: thistle;
+}
+
+#loginRegisterHolder
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    /* height: 100%; */
+    gap: 20px;
+    margin: 20px 0px;
+}
+
+#loginRegisterHolder a
+{
+    font-family: DM Sans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: rgb(130, 46, 194);
+    /* color: #AD343E; */
+    text-decoration: none;
+    /* border-bottom: 2px solid #AD343E; */
+    background-color: violet;
+}

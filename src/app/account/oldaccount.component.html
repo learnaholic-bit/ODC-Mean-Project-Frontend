@@ -1,0 +1,25 @@
+
+<!-- container will mostly be a card in the center of the page -->
+<div class="container">
+    <div class="card">
+        <h1>Account</h1>
+        <!-- <p>get account details here and check cookies for login / register</p> -->
+        
+        @if (loggedIn) {
+        
+            <h2>Logged In</h2>
+        }
+        @else
+        {
+            <div id="loginRegisterHolder">
+                <a routerLink="/account/login">Login</a>
+                <a routerLink="/account/register">Register</a>
+            </div>
+        }
+    </div>
+
+</div>
+
+
+
+<router-outlet></router-outlet>

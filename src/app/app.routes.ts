@@ -8,6 +8,10 @@ import { DrinksComponent } from './menu/drinks/drinks.component';
 import { DesertsComponent } from './menu/deserts/deserts.component';
 import { AccountComponent } from './account/account.component';
 import { ManageComponent } from './manage/manage.component';
+import { RegisterComponent } from './account/register/register.component';
+import { LoginComponent } from './account/login/login.component';
+import { EMPTY } from 'rxjs';
+import { AccountDetailsComponent } from './account/account-details/account-details.component';
 
 export const routes: Routes = [
 {
@@ -56,8 +60,25 @@ export const routes: Routes = [
 
 {
     path: 'account',
-    component: AccountComponent
+    component: AccountComponent,
+    children: [
+        {
+            path: '',
+            component: AccountDetailsComponent
+        },
+        {
+            path: 'login',
+            component: LoginComponent
+        },
+        {
+            path: 'register',
+            component: RegisterComponent
+        }
+    ]
 },
+
+
+
 {
     path: 'manage',
     component: ManageComponent
