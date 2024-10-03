@@ -51,6 +51,10 @@ export class AccountDetailsComponent implements OnInit {
         this.email = response.data.email;
         this.role = response.data.role;
         this.photoPath = response.data.photoPath;
+        console.log(this.photoPath)
+        if (this.photoPath == '' || this.photoPath == null) {
+          this.photoPath = 'https://cdn-icons-png.flaticon.com/512/149/149071.png';
+        }
         this.id = response.data._id;
 
 

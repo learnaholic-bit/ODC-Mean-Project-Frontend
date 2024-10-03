@@ -1,0 +1,46 @@
+<p>delete works!</p>
+<div class="container">
+
+    <div class="card">
+        @if(showData){        
+            <div class="profile-header">
+                <h1>Delete this user</h1>
+            </div>
+            <div class="profile-content">
+                <div class="profile-picture">
+                  <img [src]="photoPath" alt="User Picture">
+                  <!-- <span class="fallback-text">User Picture</span> -->
+                </div>
+                <div class="profile-details">
+                  <h2>{{username}}</h2>
+                  <p>Email: {{email}}</p>
+                  <p>Username: {{username}}</p>
+                  <p>Role: {{role}}</p>
+                  <p>ID: {{id}}</p>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="actionsRow">
+                    <a (click)="delete($event)"> Delete </a>
+                </div>
+            </div>
+ 
+            <!-- <p>get account details here and check cookies for login / register</p> -->
+            
+        }
+        @else {
+            <h1>{{updateMessage}}</h1>
+            <!-- <h1>User Not Found</h1> -->
+            <div class="onUpdateAction">
+                <input (click)="previousPage()" type="submit" value="Back">
+            </div>
+        }
+        
+    
+    
+
+</div>
+
+
+
+

@@ -10,7 +10,7 @@
         <div class="profile-content">
             <div class="profile-picture">
               <img [src]="photoPath" alt="User Picture">
-              <span class="fallback-text">User Picture</span>
+              <!-- <span class="fallback-text">User Picture</span> -->
             </div>
             <div class="profile-details">
               <h2>{{username}}</h2>
@@ -35,7 +35,7 @@
                     <a routerLink="/account/register">Register</a>
                 } -->
             </div>
-            @if (loginStatus) {
+            @if (adminStatus) {
                 <a routerLink="/manage">Manage users and items</a>
             }
         </div>

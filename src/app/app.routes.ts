@@ -7,6 +7,8 @@ import { RegisterComponent } from './account/register/register.component';
 import { LoginComponent } from './account/login/login.component';
 import { EMPTY } from 'rxjs';
 import { AccountDetailsComponent } from './account/account-details/account-details.component';
+import { EditUserComponent } from './account/edit-user/edit-user.component';
+import { DeleteComponent } from './account/delete/delete.component';
 
 export const routes: Routes = [
 {
@@ -68,6 +70,14 @@ export const routes: Routes = [
         {
             path: 'register',
             component: RegisterComponent
+        },
+        {
+            path: 'edit',
+            component: EditUserComponent
+        },
+        {
+            path: 'delete',
+            component: DeleteComponent
         }
     ]
 },
