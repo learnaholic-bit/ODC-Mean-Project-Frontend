@@ -1,9 +1,46 @@
-<p>account-details works!</p>
+<!-- <p>account-details works!</p> -->
+<!-- <p>get account details here and check cookies for login / register</p> -->
 
-<!-- @if (loginStatus) {
+<div class="container">
 
-    <h2>Logged In</h2>
-}
+    <div class="card">
+        <div class="profile-header">
+            <h1>User Profile</h1>
+        </div>
+        <div class="profile-content">
+            <div class="profile-picture">
+              <img [src]="photoPath" alt="User Picture">
+              <span class="fallback-text">User Picture</span>
+            </div>
+            <div class="profile-details">
+              <h2>{{username}}</h2>
+              <p>Email: {{email}}</p>
+              <p>Username: {{username}}</p>
+              <p>Role: {{role}}</p>
+              <p>ID: {{id}}</p>
+            </div>
 
-<p>Account Details</p>
-<p>Login Status: {{ loginStatus }}</p> -->
+        </div>    
+        
+        
+        <div class="actions">
+            <div class="actionsRow">
+                <a (click)="logout()"> Logout </a>
+                
+                @if (loginStatus) {
+                    <a routerLink="/account/edit">Edit Profile</a>
+                }
+                <!-- @else {
+                    <a routerLink="/account/login">Login</a>
+                    <a routerLink="/account/register">Register</a>
+                } -->
+            </div>
+            @if (loginStatus) {
+                <a routerLink="/manage">Manage users and items</a>
+            }
+        </div>
+    
+    
+    </div>
+
+</div>
