@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, Params, RouterLink, RouterOutlet } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -19,6 +19,10 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     // console.log(this.route);
     // console.log(this.category);
+    // query params map
+
+
+
     this.fetchAndUpdateItems(this.category);
 
 

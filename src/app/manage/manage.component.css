@@ -1,5 +1,11 @@
+/* .container
+{
+    margin-bottom: 40vh !important;
+
+} */
+
 .table-active{
-    color: whitesmoke;
+    color: white;
     font-weight: bold;
     background-color: lightslategray !important;
 }
@@ -77,14 +83,18 @@ font-weight: normal;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    justify-content: center;
+    justify-content: first baseline;
     flex-wrap: wrap;
     width: 100%;
+    min-height: 100vh;
+    height: auto;
+    /* margin-bottom: 40px; */
+    margin-bottom: 40vh !important;
     /* height: calc(100vh - 149px); */
     /* background-color: yellow; */
-    margin: 0;
+    /* margin: 0; */
     padding: 30px;
-
+    position: relative;
 }
 
 table
@@ -148,5 +158,4 @@ input, select
     /* padding: 5px; */
     margin: 0;
 }
-
 

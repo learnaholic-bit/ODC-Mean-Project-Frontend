@@ -1,0 +1,176 @@
+/* Footer Container */
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 15px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-section {
+    margin-right: 80px;
+}
+
+.logo-section p {
+    font-size: 14px;
+    margin: 20px 0;
+    color: #a1a1a1;
+}
+
+.footer-logo {
+    width: 120px;
+}
+
+  /* Pages and Utility Links */
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #a1a1a1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+  /* Social Icons */
+/* .social-icons a {
+    color: #d9534f;
+    margin-right: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #fff;
+} */
+
+  /* Instagram Section */
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+.instagram-grid img {
+    height: 120px;
+    width: 120px; ;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+  /* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #a1a1a1;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+    flex-direction: column;
+    text-align: center;
+    }
+
+
+    .footer-section {
+    margin-bottom: 30px;
+    }
+
+    .instagram-grid {
+    /* grid-template-columns: 1fr; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    }
+    
+    .footer-section ul li {
+    margin-bottom: 5px;
+    }
+
+    .footer-section ul li a {
+    font-size: 16px;
+    }
+
+    .social-icons {
+    justify-content: center;
+    }
+
+    .footer-logo {
+    margin: 0 auto;
+    }
+}
+
+
+.logo img{
+    width: 55px;
+}
+.logo h4{
+    /* margin-left: 10px; */
+    font-size: 32.67px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    /* font-family: Playfair Display, serif; */
+    font-style: italic;
+    line-height: 29.3px;
+    margin: 0;
+    padding: 0;
+}
+.logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 10px;
+
+    /* background-color: tomato; */
+}

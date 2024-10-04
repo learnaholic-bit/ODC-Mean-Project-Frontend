@@ -60,8 +60,8 @@
                   
                   }
 
-                  <td class="text-center"><a class="edit actionTd" [routerLink]="[urlPath.edit[tableMode]]" [queryParams]="{ id: item._id }">Edit</a></td>
-                  <td class="text-center"><a class="delete actionTd" [routerLink]="[urlPath.delete[tableMode]]" [queryParams]="{ id: item._id }">Delete</a></td>
+                  <td class="text-center editTd"><a class="edit actionTd" [routerLink]="[urlPath.edit[tableMode]]" [queryParams]="{ id: item._id }">Edit</a></td>
+                  <td class="text-center deleteTd"><a class="delete actionTd" [routerLink]="[urlPath.delete[tableMode]]" [queryParams]="{ id: item._id }">Delete</a></td>
 
 
                 </tr>
@@ -91,6 +91,16 @@
                       </select>
                     </td>
                     }
+                    @else if (key == 'category') {
+                      <td>
+                        <input id="category" type="text" name="category" placeholder="category" list="categoryList" autocomplete="off">
+                        <datalist id="categoryList">
+                          @for (item of catergoryList; track $index) {
+                              <option [value]="item"></option>
+                          }
+                        </datalist>
+                      </td>
+                    }
                     @else {
                       <td><input type="text" [name]="key"></td>
                     }
@@ -103,9 +113,21 @@
                   </td>
                 </tr>
               </tbody>
+
+            
             }
           </table>
         </form>
+
+      @if (errorMessage && createState) {
+          <div class="alert alert-warning m-0" role="alert">
+              Error:
+          @for (item of errorMessage; track $index) {
+              {{item.msg}}
+              <br>
+          }
+          </div>
+      } 
 
 
 

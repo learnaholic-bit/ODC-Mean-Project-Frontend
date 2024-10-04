@@ -1,40 +1,42 @@
-<div class="landingTextHolder">
-    <h1>Our Menu</h1>
-    <p>We consider all the drivers of change gives you the components you need to change to create a truly happens.</p>
-</div>
-<ul>
-    <!-- you should omit / as i think we will continue the path not open from start -->
-    <!-- <li><a routerLink="/menu" routerLinkActive="activeLink">All</a></li>
-    <li><a routerLink="/menu/breakfast" routerLinkActive="activeLink">Breakfast</a></li>
-    <li><a routerLink="/menu/main" routerLinkActive="activeLink">Main Dishes</a></li>
-    <li><a routerLink="/menu/drinks" routerLinkActive="activeLink">Drinks</a></li>
-    <li><a routerLink="/menu/desserts" routerLinkActive="activeLink">Desserts</a></li> -->
-    <!-- Alternative approach -->
-     <!-- set all as intial active if not given -->
-    <li category="all" (click)="changeCategory($event, 'all')" class="activeLink">All</li>
-    <li category="breakfast" (click)="changeCategory($event, 'breakfast')">Breakfast</li>
-    <li category="main" (click)="changeCategory($event, 'main')">Main Dishes</li>
-    <li category="drinks" (click)="changeCategory($event, 'drinks')">Drinks</li>
-    <li category="desserts" (click)="changeCategory($event, 'desserts')">Desserts</li>
-</ul>
+<div class="menuContainer">
 
-
-<div class="itemsContainer">
-    @for (item of items; track $index) {
-    <div class="item">
-        <img [src]="item?.photoPath" alt="photoPath">
-        <div class="itemFlexData">
-            <p class="itemPrice">${{item?.price}}</p>
-            <h3 class="itemName">{{item?.name}}</h3>
-            <p class="itemDescription">{{item?.description}}</p>
-        </div>
+    <div class="landingTextHolder">
+        <h1>Our Menu</h1>
+        <p>We consider all the drivers of change gives you the components you need to change to create a truly happens.</p>
     </div>
-    }
+    <ul>
+        <!-- you should omit / as i think we will continue the path not open from start -->
+        <!-- <li><a routerLink="/menu" routerLinkActive="activeLink">All</a></li>
+        <li><a routerLink="/menu/breakfast" routerLinkActive="activeLink">Breakfast</a></li>
+        <li><a routerLink="/menu/main" routerLinkActive="activeLink">Main Dishes</a></li>
+        <li><a routerLink="/menu/drinks" routerLinkActive="activeLink">Drinks</a></li>
+        <li><a routerLink="/menu/desserts" routerLinkActive="activeLink">Desserts</a></li> -->
+        <!-- Alternative approach -->
+        <!-- set all as intial active if not given -->
+        <li category="all" (click)="changeCategory($event, 'all')" class="activeLink">All</li>
+        <li category="breakfast" (click)="changeCategory($event, 'breakfast')">Breakfast</li>
+        <li category="main" (click)="changeCategory($event, 'main')">Main Dishes</li>
+        <li category="drinks" (click)="changeCategory($event, 'drinks')">Drinks</li>
+        <li category="desserts" (click)="changeCategory($event, 'desserts')">Desserts</li>
+    </ul>
 
 
+    <div class="itemsContainer">
+        @for (item of items; track $index) {
+        <div class="item">
+            <img [src]="item?.photoPath" alt="photoPath">
+            <div class="itemFlexData">
+                <p class="itemPrice">${{item?.price}}</p>
+                <h3 class="itemName">{{item?.name}}</h3>
+                <p class="itemDescription">{{item?.description}}</p>
+            </div>
+        </div>
+        }
+
+
+
+    </div>
 
 </div>
-
-
 <!-- <router-outlet></router-outlet> -->
 <!-- <app-all></app-all> -->

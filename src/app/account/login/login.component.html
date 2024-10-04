@@ -2,16 +2,35 @@
 
     <div class="card">
         <h1>Login</h1>
-        <p>get account details here and check cookies for login / register</p>
+        <!-- <p>get account details here and check cookies for login / register</p> -->
         <form (submit)="onSubmit($event)" method="post">
+            @if (errorMessage){
+                <div class="alert alert-warning m-0" role="alert">
+                <!-- Display the error message here -->
+                Error: {{errorMessage}}
+                </div>
+            }
             <input type="text" name="email" placeholder="email">
             <input type="password" name="password" placeholder="password">
             <input type="submit" value="Login">
 
         </form>
         <p>Don't have an account? <a routerLink="/account/register">Register</a></p>
-    
+        
+
     
     </div>
 
 </div>
+
+
+<!-- 
+@if (errorMessage){
+    <div class="alert alert-warning m-0" role="alert">
+    Error: {{errorMessage}}
+    </div>
+} 
+errorMessage: string = '';
+-->
+
+

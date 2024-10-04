@@ -152,5 +152,10 @@ a
 
 #bookATable:hover, #exploreMenu:hover
 {
-    background-color: goldenrod;
+    background-color: beige;
+}
+
+#bookATable:hover a, #exploreMenu:hover a
+{
+    color: black;
 }

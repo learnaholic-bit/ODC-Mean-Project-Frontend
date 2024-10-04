@@ -6,7 +6,7 @@
     justify-content: center;
     width: 100%;
     height: calc(100vh - 149px);
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .card
@@ -23,10 +23,10 @@
     border-radius: 30px;
     padding: 20px;
 }
-h1
+/* h1
 {
     background-color: thistle;
-}
+} */
 
 
 form
@@ -36,9 +36,9 @@ form
     align-items: center;
     justify-content: center;
     width: 70%;
-    height: 70%;
+    height: 60%;
     gap: 20px;
-    background-color: turquoise;
+    /* background-color: turquoise; */
 }
 
 input
@@ -63,5 +63,14 @@ a
     text-decoration: none;
     color: blue;
     /* background-color: rgb(173, 52, 62); */
+    transition: all 0.3s;
 }
 
+a:hover
+{
+    background-color: royalblue;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+
+}

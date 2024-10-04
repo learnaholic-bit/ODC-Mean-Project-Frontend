@@ -4,11 +4,12 @@ import { NavComponent } from "./nav/nav.component";
 import { NavtopComponent } from "./nav/navtop/navtop.component";
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavComponent, RouterModule, RouterLink],
+  imports: [RouterOutlet, NavComponent, RouterModule, RouterLink, FooterComponent],
   providers: [HttpClient],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

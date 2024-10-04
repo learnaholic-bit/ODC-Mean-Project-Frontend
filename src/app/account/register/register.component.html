@@ -2,8 +2,17 @@
 
     <div class="card">
         <h1>Register</h1>
-        <p>get account details here and check cookies for login / register</p>
+        <!-- <p>get account details here and check cookies for login / register</p> -->
         <form (submit)="onSubmit($event)" method="post">
+            @if (errorMessage){
+                <div class="alert alert-warning m-0" role="alert">
+                    Error:
+                @for (item of errorMessage; track $index) {
+                    {{item.msg}}
+                    <br>
+                }
+                </div>
+            } 
             <input type="text" name="email" placeholder="email">
             <input type="text" name="username" placeholder="username">
             <input type="password" name="password" placeholder="password">
@@ -20,3 +29,16 @@
     </div>
 
 </div>
+
+<!-- 
+@if (errorMessage){
+    <div class="alert alert-warning m-0" role="alert">
+        Error:
+    @for (item of errorMessage; track $index) {
+        {{item.msg}}
+        <br>
+    }
+    </div>
+} 
+errorMessage: any = '';
+-->

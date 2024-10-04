@@ -13,7 +13,9 @@ import { RouterLink } from '@angular/router';
 export class ManageComponent implements OnInit {
   loginCheckService = inject(LoginCheckService);
   http = inject(HttpClient);
+  createTableHead : HTMLElement | null = null;
   createState: boolean = false;
+  errorMessage: any = '';
   dataArray: any[] = [];
   keysArray: any[] = [];
   tableMode: string = "users";
@@ -37,6 +39,7 @@ export class ManageComponent implements OnInit {
       menu: 'http://localhost:3000/items/addItem'
     }
   };
+  catergoryList: string[] = [];
 
   ngOnInit(): void {
     this.loginCheckService.loginCheck();
@@ -44,6 +47,9 @@ export class ManageComponent implements OnInit {
 
     //request to the server
     this.getData()
+    this.http.get('http://localhost:3000/items/getCategories', {withCredentials: true}).subscribe((response : any) => {
+      this.catergoryList = response.data
+    })
 
   }
   
@@ -68,7 +74,9 @@ export class ManageComponent implements OnInit {
   create(event: Event) {
     event.preventDefault();
     console.log(event.target);
+
     const element = event.target as HTMLElement
+    this.createTableHead = element
     element.classList.toggle('table-active')
     this.createState = element.classList.contains('table-active')
     console.log(this.createState);
@@ -81,21 +89,39 @@ export class ManageComponent implements OnInit {
   createSubmit(event: Event) {
     event.preventDefault();
     console.log(event.target);
-    const element = event.target as HTMLElement;
-    element.classList.toggle('table-active');
+    let element = event.target as HTMLElement;
+    // element.classList.toggle('table-active');
     this.createState = element.classList.contains('table-active');
     console.log(this.createState);
-
+    // console.log("Form Submitted");
     // Ensure the target is an HTMLFormElement
     if (event.target instanceof HTMLFormElement) {
       let form = new FormData(event.target);
-      this.http.post(this.urlPath.add[this.tableMode], form, { withCredentials: true }).subscribe((response: any) => {
+      console.log("got here");
+      this.http.post(this.urlPath.add[this.tableMode], form, { withCredentials: true }).subscribe({next:(response: any) => {
         console.log(response);
         if (response['status'] == 'success') {
-          this.getData();
+          console.log('success');
           this.createState = false;
+          this.createTableHead?.classList.remove('table-active');
+          this.getData();
         }
-      });
+        else
+        {
+          this.errorMessage = "An Error has occurred";
+          this.createState = true;
+
+        }
+
+
+      },
+      error:(err) => {
+        // console.log(err.error.data)
+        this.errorMessage = err.error.data;
+        this.createState = true;
+
+      }
+    });
     } else {
       console.error('The event target is not an HTMLFormElement.');
     }

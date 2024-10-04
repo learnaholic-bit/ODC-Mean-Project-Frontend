@@ -5,25 +5,25 @@
             <img src="./rice.svg" alt="food1">
             <h3>Breakfast</h3>
             <p>In the new era of technology we look in the future with certainty and pride for our life.</p>
-            <a routerlink="/menu/Breakfast">Explore Menu</a>
+            <a [routerLink]="['/menu']" [queryParams]="{ category: 'breakfast' }">Explore Menu</a>
         </div>
         <div class="card">
             <img src="./rice.svg" alt="food2">
             <h3>Main Dishes</h3>
             <p>In the new era of technology we look in the future with certainty and pride for our life.</p>
-            <a routerlink="/menu/Main">Explore Menu</a>
+            <a [routerLink]="['/menu']" [queryParams]="{ category: 'main' }">Explore Menu</a>
         </div>
         <div class="card">
             <img src="./drink.svg" alt="food3">
             <h3>Drinks</h3>
             <p>In the new era of technology we look in the future with certainty and pride for our life.</p>
-            <a routerlink="/menu/Drinks">Explore Menu</a>
+            <a [routerLink]="['/menu']" [queryParams]="{ category: 'drinks' }">Explore Menu</a>
         </div>
         <div class="card">
             <img src="./desert.svg" alt="food4">
             <h3>Desserts</h3>
             <p>In the new era of technology we look in the future with certainty and pride for our life.</p>
-            <a routerlink="/menu/Desserts">Explore Menu</a>
+            <a [routerLink]="['/menu']" [queryParams]="{ category: 'desserts' }">Explore Menu</a>
         </div>
     </div>
 </div>

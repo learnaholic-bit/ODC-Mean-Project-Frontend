@@ -6,7 +6,7 @@
     justify-content: center;
     width: 100%;
     height: calc(100vh - 149px);
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .card
@@ -15,18 +15,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 25vw;
-    min-width: 400px;
-    height: 60vh;
-    min-height: 500px;
+    width: auto;
+    min-width: max(400px, 25vw);
+    /* height: max(500px, 60vh); */
+    height: auto;
+    min-height: max(500px, 60vh);
     background-color: tomato;
     border-radius: 30px;
     padding: 20px;
+    gap: 20px;
 }
-h1
+/* h1
 {
     background-color: thistle;
-}
+} */
 
 
 form
@@ -38,7 +40,7 @@ form
     width: 70%;
     height: 70%;
     gap: 20px;
-    background-color: turquoise;
+    /* background-color: turquoise; */
 }
 
 input
@@ -63,7 +65,18 @@ a
     text-decoration: none;
     color: blue;
     /* background-color: rgb(173, 52, 62); */
+    transition: all 0.3s;
 }
+
+a:hover
+{
+    background-color: royalblue;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
 
 
 /* Styles for the custom file upload button */
