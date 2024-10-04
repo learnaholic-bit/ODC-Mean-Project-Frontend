@@ -10,6 +10,7 @@ import { AccountDetailsComponent } from './account/account-details/account-detai
 import { EditUserComponent } from './account/edit-user/edit-user.component';
 import { DeleteComponent } from './account/delete/delete.component';
 import { MenuEditComponent } from './menu/menu-edit/menu-edit.component';
+import { MenuItemDeleteComponent } from './menu/menu-item-delete/menu-item-delete.component';
 
 export const routes: Routes = [
 {
@@ -53,6 +54,10 @@ export const routes: Routes = [
 {
     path: 'menu/edit',
     component: MenuEditComponent
+},
+{
+    path: 'menu/delete',
+    component: MenuItemDeleteComponent
 },
 // {
 //     path: 'about',

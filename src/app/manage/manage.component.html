@@ -60,18 +60,19 @@
                   
                   }
 
-                  <td class="text-center"><a [routerLink]="[urlPath.edit[tableMode]]" [queryParams]="{ id: item._id }">Edit</a></td>
-                  <td class="text-center"><a [routerLink]="[urlPath.delete[tableMode]]" [queryParams]="{ id: item._id }">Delete</a></td>
+                  <td class="text-center"><a class="edit actionTd" [routerLink]="[urlPath.edit[tableMode]]" [queryParams]="{ id: item._id }">Edit</a></td>
+                  <td class="text-center"><a class="delete actionTd" [routerLink]="[urlPath.delete[tableMode]]" [queryParams]="{ id: item._id }">Delete</a></td>
 
 
                 </tr>
               }
               </tbody>
             }
+            <!-- create state -->
             @else {
               <tbody>
                 
-                <tr>
+                <tr class="createRow">
                   @for (key of keysArray; track $index) {
                     @if (key == 'photoPath') {
                       <td><input id="file-upload" type="file" name="image" accept="image/*"></td>
@@ -80,17 +81,26 @@
                       <td></td>
                     }
                     @else if (key == 'role') {
+                      <td>
+
+
+                      
                       <select value="user" name="role">
                         <option value="user">user</option>
                         <!-- <option value="admin">admin</option> -->
                       </select>
+                    </td>
                     }
                     @else {
                       <td><input type="text" [name]="key"></td>
                     }
                   }
                   @if (tableMode == 'users') {<td><input type="password" name="password"></td>}
-                  <td class="text-center"><button>Create</button></td>
+                  <td class="text-center actionTd">
+                    <div class="createDiv">
+                      <button class="create">Create</button>
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             }

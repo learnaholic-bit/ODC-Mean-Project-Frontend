@@ -69,6 +69,7 @@ margin: 0;
 max-width: 250px;
 word-wrap: break-word; /* This will wrap the text to a new line */
 word-break: break-all; /* This will break the word to fit within the width */
+font-weight: normal;
 }
 
 .tableHolder
@@ -103,7 +104,7 @@ input, select
     margin: 0;
 }
 
-button
+.create, .delete, .edit
 {
     padding: 5px;
     border-radius: 10px;
@@ -111,8 +112,41 @@ button
     border: none;
     background-color: rgba(119, 136, 153, 0.499);
     color: whitesmoke;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
 }
-button:hover
+.delete,.edit
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.create:hover
 {
     background-color: lightslategray;
 }
+.delete:hover
+{
+    background-color: rgb(173, 52, 62);
+}
+.edit:hover
+{
+    background-color: rgb(43, 116, 190);
+}
+.actionTd
+{
+
+    width: auto;
+    /* width: 100%;
+    height: 100%; */
+    /* gap: 20px;
+    background-color: turquoise; */
+    /* width: 100%; */
+    /* padding: 5px; */
+    margin: 0;
+}
+
+

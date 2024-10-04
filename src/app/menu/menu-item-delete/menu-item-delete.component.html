@@ -1,0 +1,48 @@
+<p>menu-item-delete works!</p>
+<p>delete works!</p>
+<div class="container">
+
+    <div class="card">
+        @if(showForm){        
+            <div class="profile-header">
+                <h1>Delete this Item</h1>
+            </div>
+            <div class="profile-content">
+                <div class="profile-picture">
+                  <img [src]="photoPath" alt="Item Picture">
+                  <!-- <span class="fallback-text">User Picture</span> -->
+                </div>
+                <div class="profile-details">
+                  <h2>{{name}}</h2>
+                  <p>Description: {{description}}</p>
+                  <p>Price: ${{price}}</p>
+                  <p>Category: {{category}}</p>
+                  <p>Quantity: {{quantity}}</p>
+                  <!-- <p>ID: {{id}}</p> -->
+                </div>
+            </div>
+            <div class="actions">
+                <div class="actionsRow">
+                    <a (click)="delete($event)"> Delete </a>
+                </div>
+            </div>
+ 
+            <!-- <p>get account details here and check cookies for login / register</p> -->
+            
+        }
+        @else {
+            <h1>{{updateMessage}}</h1>
+            <!-- <h1>User Not Found</h1> -->
+            <div class="onUpdateAction">
+                <input (click)="previousPage()" type="submit" value="Back">
+            </div>
+        }
+        
+    
+    
+
+</div>
+
+
+
+
