@@ -9,6 +9,7 @@ import { EMPTY } from 'rxjs';
 import { AccountDetailsComponent } from './account/account-details/account-details.component';
 import { EditUserComponent } from './account/edit-user/edit-user.component';
 import { DeleteComponent } from './account/delete/delete.component';
+import { MenuEditComponent } from './menu/menu-edit/menu-edit.component';
 
 export const routes: Routes = [
 {
@@ -48,6 +49,10 @@ export const routes: Routes = [
     //         redirectTo: ''
     //     }
     // ]
+},
+{
+    path: 'menu/edit',
+    component: MenuEditComponent
 },
 // {
 //     path: 'about',

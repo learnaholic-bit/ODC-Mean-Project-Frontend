@@ -1,0 +1,228 @@
+.container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: calc(100vh - 149px);
+    background-color: yellow;
+}
+
+.card
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: auto;
+    min-width: max(400px, 25vw);
+    /* height: max(500px, 60vh); */
+    height: auto;
+    min-height: max(500px, 60vh);
+    background-color: tomato;
+    border-radius: 30px;
+    padding: 20px;
+}
+h1
+{
+    background-color: thistle;
+}
+
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    background-color: turquoise;
+}
+
+input, select, textarea, datalist
+{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+input[type="submit"]:hover
+{
+    cursor: pointer;
+    background-color: rgb(173, 52, 62) !important;
+    color: white;
+
+}
+
+a
+{
+    text-decoration: none;
+    color: blue;
+    /* background-color: rgb(173, 52, 62); */
+}
+
+
+/* Styles for the custom file upload button */
+.custom-file-upload {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+
+.onUpdateAction
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* height: 100%; */
+    gap: 20px;
+    background-color: turquoise;
+}
+
+.itemProperty{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    /* height: 100%; */
+    gap: 20px;
+    background-color: turquoise;
+}
+.itemProperty label
+{
+    width: 120px;
+}
+
+textarea
+{
+    resize: both;
+}
+
+
+
+/* #region menu items */
+
+
+.itemsContainer
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 100%;
+    gap: 20px;
+    padding: 50px;
+}
+
+.item 
+{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    width: 306px;
+    height: 428px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: DM Sans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    border: 2px solid #DBDFD0;
+    /* cursor: pointer; */
+    transition: all 0.2s;
+    color: black;
+    background-color: white;
+    overflow: hidden;
+}
+
+
+.item:hover
+{}
+
+
+.item img
+{
+    /* width: 100%; */
+    height: 230px;
+    position: relative;
+    object-fit: cover;
+    object-position: center;
+    /* overflow: hidden; */
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.itemFlexData
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* padding: 50px 10px; */
+    align-items: center;
+    /* gap: 10px; */
+    /* padding: 10px; */
+    width: 100%;
+    height: calc(100% - 230px);
+    padding: 20px;
+    font-family: DM Sans, sans-serif;
+}
+
+
+.itemPrice
+{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #AD343E;
+}
+
+.itemName
+{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    /* font-style: italic; */
+}
+
+.itemDescription
+{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+
+/* #endregion */

@@ -1,1 +1,79 @@
 <p>menu-edit works!</p>
+<!-- <p>edit-user works!</p> -->
+<div class="container">
+
+    <div class="item">
+        <img [src]="ShowMenuItem?.photoPath" alt="photoPath">
+        <div class="itemFlexData">
+            <p class="itemPrice">${{ShowMenuItem?.price}}</p>
+            <h3 class="itemName">{{ShowMenuItem?.name}}</h3>
+            <p class="itemDescription">{{ShowMenuItem?.description}}</p>
+        </div>
+    </div>
+
+    <div class="card" id="editItem">
+        @if(showForm){        
+            <h1>Edit Item</h1>
+            <!-- <p>get account details here and check cookies for login / register</p> -->
+            <form (submit)="onSubmit($event)" method="post">
+                <div class="itemProperty">
+                    <label for="name">
+                        Name
+                    </label>
+                    <input id="name" type="text" name="name" placeholder="name" [value]="name">
+                </div>
+                <div class="itemProperty">
+                    <label for="description"> 
+                        Description
+                    </label>
+                    <!-- <input> -->
+                    <textarea  id="description" type="text" name="description" placeholder="description" [value]="description"></textarea>
+                </div>
+                <div class="itemProperty">
+                    <label for="price"> 
+                        Price
+                    </label>
+                    <input id="price" type="number" name="price" placeholder="price" [value]="price" > <!-- [value]="password" -->
+                </div>
+                <div class="itemProperty">
+                    <label for="quantity"> 
+                        Quantity
+                    </label>
+                    <input id="quantity" type="number" name="quantity" placeholder="quantity" [value]="quantity" > <!-- [value]="password" -->
+                </div>
+                <div class="itemProperty">
+                    <label for="quantity"> 
+                        Category
+                    </label>
+                    <input id="category" type="text" name="category" placeholder="category" list="categoryList" [value]="category" autocomplete="off">
+                    <datalist id="categoryList">
+                        @for (item of catergoryList; track $index) {
+                            <option [value]="item"></option>
+                        }
+                    </datalist>
+                </div>
+                <label for="file-upload" class="custom-file-upload"> 
+                    Choose an image
+                </label>
+                <input id="file-upload" type="file" name="image" accept="image/*" style="display: none;">
+                
+                <div class="onUpdateAction">
+                    <input (click)="previousPage()" type="submit" value="Back">
+                    <input type="submit" value="Update">
+                </div>
+            </form>
+        }
+        @else {
+            <h1>{{updateMessage}}</h1>
+            <div class="onUpdateAction">
+                <input (click)="previousPage()" type="submit" value="Back">
+                <input (click)="showForm = true" type="submit" value="Edit Item">
+            </div>
+        }
+    
+    
+    </div>
+
+    
+</div>
+

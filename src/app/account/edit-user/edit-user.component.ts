@@ -27,7 +27,7 @@ export class EditUserComponent implements OnInit {
   email: string = '';
   username: string = '';
   password: string = '';
-  role: string = '';
+  role: string = 'user';
   photoPath: string = '';
   private submitOption: string = '';
 
@@ -167,5 +167,15 @@ export class EditUserComponent implements OnInit {
     this.location.back();
   }
 
+  // reloadComponent(): void {
+  //   const currentUrl = this.router.url;
+  //   console.log(currentUrl);
+  //   this.router.navigate([currentUrl], { replaceUrl: true });
+  //   // this.router.navigate([currentUrl], {
+  //   //   relativeTo: this.activatedRoute,
+  //   //   queryParams: { reload: new Date().getTime() },
+  //   //   queryParamsHandling: 'merge'
+  //   // });
+  // }
 
 }

@@ -10,16 +10,19 @@
                 <input type="text" name="username" placeholder="username" [value]="username">
                 <input type="password" name="password" placeholder="password" > <!-- [value]="password" -->
                 @if(isAdmin){
-                    <!-- <select value="user" name="role" [value]="role">
+                    <select [value]="role" name="role">
                         <option value="user">user</option>
                         <option value="admin">admin</option>
-                    </select> -->
+                    </select>
                 }
                 <label for="file-upload" class="custom-file-upload"> 
                     Choose a profile image
                 </label>
                 <input id="file-upload" type="file" name="image" accept="image/*" style="display: none;">
-                <input type="submit" value="Update">
+                <div class="onUpdateAction">
+                    <input (click)="previousPage()" type="submit" value="Back">
+                    <input type="submit" value="Update">
+                </div>
             </form>
         }
         @else {
