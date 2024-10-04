@@ -80,6 +80,7 @@ export class ManageComponent implements OnInit {
     element.classList.toggle('table-active')
     this.createState = element.classList.contains('table-active')
     console.log(this.createState);
+    this.errorMessage = '';
     // this.http.get(this.urlPath.add[this.tableMode], {withCredentials: true}).subscribe((response : any) => {
     //   console.log(response);
     // })
